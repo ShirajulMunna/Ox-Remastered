@@ -94,9 +94,9 @@ public class InGameAnswerHandler : MonoBehaviour
         });
         
 
-        clock.gameObject.SetActive(false);
+       /* clock.gameObject.SetActive(false);
         yes.gameObject.SetActive(false);
-        no.gameObject.SetActive(false);
+        no.gameObject.SetActive(false);*/
 
     }
 
@@ -249,7 +249,7 @@ public class InGameAnswerHandler : MonoBehaviour
         mainGamePage.SetActive(false);
         mainResultPanel.SetActive(true);
        // Manager.Instance.gameStat.SetActive(true);
-        //Manager.Instance.OpenStatBox();
+        Manager.Instance.OpenStatBox();
         Manager.Instance.ParticleActivate();
               
     
