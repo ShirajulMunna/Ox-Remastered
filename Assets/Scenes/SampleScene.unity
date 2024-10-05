@@ -2564,8 +2564,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 535.5, y: 958}
-  m_SizeDelta: {x: 1071, y: 1920}
+  m_AnchoredPosition: {x: 540.00006, y: 958}
+  m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396068256
 MonoBehaviour:
@@ -3738,6 +3738,9 @@ MonoBehaviour:
   - {fileID: 74966003}
   - {fileID: 1722171532}
   - {fileID: 75256110}
+  - {fileID: 1722171532}
+  - {fileID: 468036109}
+  - {fileID: 1444578083}
 --- !u!1 &521850051
 GameObject:
   m_ObjectHideFlags: 0
@@ -12008,7 +12011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1842722891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13459,6 +13462,7 @@ MonoBehaviour:
   mainResultPanel: {fileID: 1970428028}
   giftPanel: {fileID: 610619720}
   sorryPanel: {fileID: 1842722890}
+  mainGamePage: {fileID: 58239436}
   score: 0
   audioChannelSO: {fileID: 11400000, guid: 8ede94be84f8f97498ad372fbd37711d, type: 2}
   isButtonPressed: 0

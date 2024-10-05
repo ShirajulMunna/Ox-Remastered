@@ -19,7 +19,7 @@ public class InGameAnswerHandler : MonoBehaviour
     public Image[] resultBanner;
     public Image blackBg,clock,yes,no;
     public EventChannelSO questionFinished;
-    public GameObject mainResultPanel,giftPanel,sorryPanel;
+    public GameObject mainResultPanel,giftPanel,sorryPanel,mainGamePage;
     public int score;
     public AudioChannelSO audioChannelSO;
     public bool isButtonPressed;
@@ -47,13 +47,13 @@ public class InGameAnswerHandler : MonoBehaviour
     private void OnEnable() 
     {
        
-        questionFinished.OnEventRaise += TriggerMainResultPanel;
+       // questionFinished.OnEventRaise += TriggerMainResultPanel;
     }
 
     private void OnDisable()
     {
        
-        questionFinished.OnEventRaise -= TriggerMainResultPanel;
+       // questionFinished.OnEventRaise -= TriggerMainResultPanel;
 
     }
 
@@ -202,9 +202,10 @@ public class InGameAnswerHandler : MonoBehaviour
 
         else 
         {
-            yield return new WaitForSeconds(0.5f);
-            questionFinished.RaiseEvent();
-        
+            
+            TriggerMainResultPanel();
+
+
         }
           
     }
@@ -234,8 +235,8 @@ public class InGameAnswerHandler : MonoBehaviour
 
         else
         {
-            yield return new WaitForSeconds(0.5f);
-            questionFinished.RaiseEvent();
+           
+            TriggerMainResultPanel();
 
         }
 
@@ -245,9 +246,10 @@ public class InGameAnswerHandler : MonoBehaviour
     public void TriggerMainResultPanel() 
     {
         Debug.Log("Open Gift/ Fail Panel");
+        mainGamePage.SetActive(false);
         mainResultPanel.SetActive(true);
-        Manager.Instance.gameStat.SetActive(true);
-        Manager.Instance.OpenStatBox();
+       // Manager.Instance.gameStat.SetActive(true);
+        //Manager.Instance.OpenStatBox();
         Manager.Instance.ParticleActivate();
               
     
